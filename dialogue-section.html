@@ -17,7 +17,7 @@
 			sizes="180x180"
 			href="/images/apple-touch-icon.png"
 		/>
-		<link rel="manifest" href=="/images/site.webmanifest" />
+		<link rel="manifest" href="/images/site.webmanifest" />
 		<link rel="stylesheet" href="normalize.css" />
 		<link rel="stylesheet" href="variable.css" />
 		<link rel="stylesheet" href="font.css" />
@@ -28,7 +28,7 @@
 	<body class="light-theme">
 		<main class="main">
 			<section class="dialogue">
-				<div class="modal">
+				<div class="modal hidden">
 					<div class="modal__content">
 						<div class="modal__header">
 							<h2 class="modal__title">Welcome to the Time Portal</h2>
@@ -66,7 +66,7 @@
 						</form>
 					</div>
 				</div>
-				<div class="dialogue__container">
+				<div class="dialogue__container" style="display: none">
 					<div class="dialogue__messages"></div>
 					<div class="dialogue__options"></div>
 				</div>

@@ -124,6 +124,8 @@ body {
     Унифицированный интерлиньяж
    */
 	line-height: 1.5;
+	font-family: var(--font-family);
+	color: #333;
 }
 
 /**
@@ -191,4 +193,57 @@ svg * {
 
 * {
 	-webkit-tap-highlight-color: transparent;
+	margin: 0;
+	padding: 0;
+}
+
+/* Reset and base styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-family);
+	line-height: 1.5;
+	color: #333;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	background: none;
+	font-family: inherit;
+}
+
+input {
+	font-family: inherit;
+}
+
+/* Remove default focus styles */
+:focus {
+	outline: none;
+}
+
+/* Remove default button styles */
+button {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	font: inherit;
+	color: inherit;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+	list-style: none;
+}
+
+/* Remove default link styles */
+a {
+	text-decoration: none;
+	color: inherit;
 }
