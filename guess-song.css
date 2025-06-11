@@ -1,0 +1,237 @@
+@import 'variable.css';
+@import 'font.css';
+
+/* Глобальний контейнер */
+.global-website-container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 2rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/* Базові стилі */
+.guess-song-section {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	background-color: var(--color-white);
+}
+
+.guess-song-container {
+	width: 100%;
+	max-width: 800px;
+	background-color: var(--color-white);
+	border-radius: 12px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 2rem;
+}
+
+/* Заголовок */
+.guess-song-title {
+	font-family: 'Aboreto', sans-serif;
+	font-size: 3.5rem;
+	font-weight: 400;
+	line-height: 1.2;
+	text-align: center;
+	color: var(--color-neutral-darkest);
+	margin-bottom: 2rem;
+}
+
+/* Плеєр */
+.song-player {
+	background-color: var(--color-white);
+	border-radius: 8px;
+	padding: 2rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.song-info {
+	text-align: center;
+	margin-bottom: 2rem;
+	padding: 1rem;
+	background-color: var(--color-white);
+	border-radius: 8px;
+}
+
+.song-title {
+	font-family: 'Aboreto', sans-serif;
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 1.3;
+	color: var(--color-neutral-darkest);
+	margin-bottom: 1rem;
+}
+
+.song-description {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: var(--color-neutral-dark);
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+/* Контроли плеєра */
+.player-controls {
+	margin-bottom: 2rem;
+	padding: 1rem;
+	background-color: var(--color-white);
+	border-radius: 8px;
+}
+
+.player-controls audio {
+	width: 100%;
+	height: 40px;
+	border-radius: 4px;
+}
+
+/* Кнопки вгадування */
+.guess-buttons {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.guess-button {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 8px;
+	background-color: var(--color-white);
+	color: var(--color-neutral-darkest);
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.1rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.guess-button:hover {
+	background-color: var(--color-neutral-lightest);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guess-button:active {
+	background-color: var(--color-active-bg);
+	transform: translateY(0);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Додаємо нові стилі для ефектів */
+.guess-button.correct {
+	background-color: #4caf50;
+	color: white;
+	animation: pulse-green 0.5s ease-in-out;
+}
+
+.guess-button.incorrect {
+	background-color: #f44336;
+	color: white;
+	animation: pulse-red 0.5s ease-in-out;
+}
+
+@keyframes pulse-green {
+	0% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+	}
+	70% {
+		transform: scale(1.05);
+		box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+	}
+	100% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+	}
+}
+
+@keyframes pulse-red {
+	0% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.7);
+	}
+	70% {
+		transform: scale(1.05);
+		box-shadow: 0 0 0 10px rgba(244, 67, 54, 0);
+	}
+	100% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(244, 67, 54, 0);
+	}
+}
+
+.guess-button__icon {
+	font-size: 1.4rem;
+}
+
+.guess-button__text {
+	font-weight: 600;
+}
+
+/* Прогрес */
+.progress-section {
+	margin-top: 2rem;
+	padding: 1rem;
+	background-color: var(--color-white);
+	border-radius: 8px;
+}
+
+.progress-info {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+	font-family: 'Raleway', sans-serif;
+	font-size: 0.95rem;
+	font-weight: 500;
+	color: var(--color-neutral-dark);
+}
+
+.progress-bar {
+	height: 8px;
+	background-color: var(--color-neutral-lightest);
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.progress-bar__fill {
+	height: 100%;
+	background-color: var(--color-neutral-darkest);
+	width: 10%;
+	transition: width 0.3s ease;
+}
+
+/* Адаптивність для секції вгадування */
+@media (max-width: 768px) {
+	.guess-song-container {
+		padding: 1rem;
+	}
+
+	.guess-song-title {
+		font-size: 2.5rem;
+	}
+
+	.song-title {
+		font-size: 1.75rem;
+	}
+
+	.song-description {
+		font-size: 1rem;
+	}
+
+	.guess-buttons {
+		flex-direction: column;
+	}
+
+	.guess-button {
+		width: 100%;
+	}
+}

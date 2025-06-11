@@ -1,0 +1,305 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--opacity-neutral-darkest-60);
+	backdrop-filter: blur(8px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+	font-family: var(--font-family);
+	font-weight: 400;
+}
+
+.modal.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal__content {
+	background: linear-gradient(
+		135deg,
+		var(--color-neutral-darkest) 0%,
+		var(--color-neutral-darker) 100%
+	);
+	padding: 2rem;
+	border-radius: var(--mega-menu-border-radius-large);
+	max-width: 500px;
+	width: 90%;
+	position: relative;
+	transform: translateY(20px);
+	opacity: 0;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: var(--mega-menu-shadow-heavy);
+	border: 1px solid var(--opacity-white-10);
+}
+
+.modal.active .modal__content {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.modal__content::before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: linear-gradient(45deg, var(--color-torch-red), transparent);
+	border-radius: calc(var(--mega-menu-border-radius-large) + 2px);
+	z-index: -1;
+	opacity: 0.5;
+	animation: borderGlow 3s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+	0%,
+	100% {
+		opacity: 0.5;
+	}
+	50% {
+		opacity: 0.8;
+	}
+}
+
+.modal__header {
+	text-align: center;
+	margin-bottom: 2rem;
+	position: relative;
+}
+
+.modal__header::after {
+	content: '';
+	position: absolute;
+	bottom: -1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 2px;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		var(--color-primary),
+		transparent
+	);
+}
+
+.modal__title {
+	font-family: var(--second-family);
+	font-size: 2rem;
+	font-weight: 400;
+	color: var(--color-torch-red);
+	margin-bottom: 1rem;
+	text-shadow: 0 0 10px var(--opacity-neutral-darkest-30);
+}
+
+.modal__text {
+	color: var(--color-neutral-light);
+	margin-bottom: 1.5rem;
+	line-height: 1.6;
+	font-weight: 400;
+}
+
+.modal__form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.form-group {
+	position: relative;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 1rem;
+	background: var(--opacity-white-5);
+	border: 1px solid var(--opacity-white-10);
+	border-radius: var(--mega-menu-border-radius);
+	color: var(--color-neutral-lightest);
+	font-family: var(--font-family);
+	font-weight: 400;
+	transition: all var(--mega-menu-transition-fast);
+}
+
+.form-group input:focus {
+	outline: none;
+	border-color: var(--color-torch-red);
+	box-shadow: 0 0 0 2px var(--opacity-neutral-darkest-20);
+	background: var(--opacity-white-10);
+}
+
+.form-group input::placeholder {
+	color: var(--color-neutral);
+	opacity: 0.7;
+}
+
+.modal__button {
+	background: linear-gradient(
+		45deg,
+		var(--color-torch-red),
+		var(--color-hollywood-cerise)
+	);
+	color: var(--color-white);
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: var(--mega-menu-border-radius);
+	font-family: var(--font-family);
+	font-weight: 600;
+	cursor: pointer;
+	transition: all var(--mega-menu-transition-fast);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	position: relative;
+	overflow: hidden;
+}
+
+.modal__button::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		var(--opacity-white-20),
+		transparent
+	);
+	transition: var(--mega-menu-transition-medium);
+}
+
+.modal__button:hover::before {
+	left: 100%;
+}
+
+.modal__button:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--mega-menu-shadow-medium);
+}
+
+.modal__button:active {
+	transform: translateY(0);
+}
+
+.dialogue-section {
+	min-height: 100vh;
+	background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+	position: relative;
+	overflow: hidden;
+}
+
+.dialogue-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: radial-gradient(
+			circle at 20% 20%,
+			rgba(var(--color-primary-rgb), 0.15) 0%,
+			transparent 50%
+		),
+		radial-gradient(
+			circle at 80% 80%,
+			rgba(var(--color-primary-rgb), 0.1) 0%,
+			transparent 50%
+		),
+		url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	opacity: 0.5;
+	animation: backgroundShift 20s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundShift {
+	0% {
+		background-position: 0% 0%;
+	}
+	100% {
+		background-position: 100% 100%;
+	}
+}
+
+.dialogue-section::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+		45deg,
+		rgba(var(--color-primary-rgb), 0.1) 0%,
+		transparent 20%,
+		transparent 80%,
+		rgba(var(--color-primary-rgb), 0.1) 100%
+	);
+	pointer-events: none;
+}
+
+.dialogue {
+	position: relative;
+	z-index: 1;
+	background: rgba(26, 26, 26, 0.7);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: var(--color-text);
+}
+
+/* Font styles */
+.dialogue__message-name {
+	font-family: 'Aboreto', serif;
+	font-size: 1.2rem;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+.dialogue__message-text {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.1rem;
+	line-height: 1.6;
+	letter-spacing: 0.3px;
+}
+
+.dialogue__option {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.1rem;
+	font-weight: 500;
+	letter-spacing: 0.3px;
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+	.dialogue {
+		font-size: 15px;
+	}
+
+	.modal__title {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.dialogue__message-content {
+		max-width: 90%;
+	}
+
+	.modal__content {
+		width: 95%;
+		padding: 1rem;
+	}
+}

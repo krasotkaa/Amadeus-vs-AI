@@ -1,0 +1,99 @@
+/* Font family variables */
+:root {
+	--font-family: 'Raleway', sans-serif;
+	--second-family: 'Aboreto', sans-serif;
+}
+
+/* Color variables */
+:root {
+	--color-scheme-1-background: var(--color-white);
+	--color-neutral-darkest: #0d0004;
+	--color-scheme-1-border: var(--color-neutral-darkest);
+	--color-scheme-1-text: var(--color-neutral-darkest);
+	--color-neutral-lighter: #dad8d9;
+	--color-white: #fff;
+	--color-neutral-lightest: #f2f2f2;
+	--color-neutral-light: #b6b2b3;
+	--color-neutral: #867f81;
+	--color-neutral-dark: #554c4f;
+	--color-neutral-darker: #25191d;
+	--opacity-transparent: rgba(255, 255, 255, 0);
+	--color-scheme-1-foreground: var(--color-white);
+	--color-scheme-1-accent: var(--color-neutral-darkest);
+	--opacity-white-5: rgba(255, 255, 255, 0.05);
+	--opacity-white-10: rgba(255, 255, 255, 0.1);
+	--opacity-white-15: rgba(255, 255, 255, 0.15);
+	--opacity-white-20: rgba(255, 255, 255, 0.2);
+	--opacity-white-30: rgba(255, 255, 255, 0.3);
+	--opacity-white-40: rgba(255, 255, 255, 0.4);
+	--opacity-white-50: rgba(255, 255, 255, 0.5);
+	--opacity-white-60: rgba(255, 255, 255, 0.6);
+	--opacity-neutral-darkest-5: rgba(13, 0, 4, 0.05);
+	--opacity-neutral-darkest-10: rgba(13, 0, 4, 0.1);
+	--opacity-neutral-darkest-15: rgba(13, 0, 4, 0.15);
+	--opacity-neutral-darkest-20: rgba(13, 0, 4, 0.2);
+	--opacity-neutral-darkest-30: rgba(13, 0, 4, 0.3);
+	--opacity-neutral-darkest-40: rgba(13, 0, 4, 0.4);
+	--opacity-neutral-darkest-50: rgba(13, 0, 4, 0.5);
+	--opacity-neutral-darkest-60: rgba(13, 0, 4, 0.6);
+	--color-lemon-lightest: #fefde6;
+	--color-lemon-lighter: #fefccd;
+	--color-lemon-light: #fbf552;
+	--color-lemon: #faf208;
+	--color-lemon-dark: #c8c106;
+	--color-lemon-darker: #646003;
+	--color-lemon-darkest: #4b4802;
+	--color-hollywood-cerise-lightest: #fee6f6;
+	--color-hollywood-cerise-lighter: #fdcded;
+	--color-hollywood-cerise-light: #f852c0;
+	--color-hollywood-cerise: #f508a6;
+	--color-hollywood-cerise-dark: #c40684;
+	--color-hollywood-cerise-darker: #620342;
+	--color-hollywood-cerise-darkest: #490231;
+	--color-torch-red-lightest: #ffe5ed;
+	--color-torch-red-lighter: #ffccdc;
+	--color-torch-red-light: #ff4c85;
+	--color-torch-red: #ff0052;
+	--color-torch-red-dark: #cc0041;
+	--color-torch-red-darker: #660020;
+	--color-torch-red-darkest: #4c0018;
+}
+
+/* Main variables */
+:root {
+	--container-width: 1440px;
+	--inline-container-padding: 15px;
+}
+
+/* Mega menu specific variables */
+:root {
+	--mega-menu-border-radius: 8px;
+	--mega-menu-border-radius-large: 12px;
+	--mega-menu-transition-fast: 0.3s ease;
+	--mega-menu-transition-medium: 0.4s ease;
+	--mega-menu-transition-slow: 0.6s ease;
+	--mega-menu-shadow-light: 0 4px 12px var(--opacity-neutral-darkest-10);
+	--mega-menu-shadow-medium: 0 8px 25px var(--opacity-neutral-darkest-15);
+	--mega-menu-shadow-heavy: 0 12px 30px var(--opacity-neutral-darkest-15);
+	--mega-menu-hover-bg: var(--opacity-neutral-darkest-5);
+	--mega-menu-hover-bg-light: rgba(13, 0, 4, 0.02);
+	--mega-menu-hover-bg-medium: rgba(13, 0, 4, 0.03);
+	--mega-menu-text-hover: #1a0007;
+	--mega-menu-text-hover-dark: #2d0009;
+}
+/* Guessing section */
+
+:root {
+	--guess-section-primary: #0d0004;
+	--guess-section-secondary: #ffd700;
+	--guess-section-background: #ffffff;
+	--guess-section-surface: #f5f5f5;
+	--guess-section-text: #333333;
+	--guess-section-text-light: #666666;
+	--guess-section-border: #e0e0e0;
+	--guess-section-hover: #f0f0f0;
+	--guess-section-active: #e6e6e6;
+	--guess-section-success: #4caf50;
+	--guess-section-error: #f44336;
+	--guess-section-transition: 0.3s;
+}

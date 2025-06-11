@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Guess the Song - Amadeus vs AI</title>
+		<link
+			rel="icon"
+			type="image/png"
+			href="/images/favicon-96x96.png"
+			sizes="96x96"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/svg/favicon.svg" />
+		<link rel="shortcut icon" href="/images/favicon.ico" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/images/apple-touch-icon.png"
+		/>
+		<link rel="manifest" href="/images/site.webmanifest" />
+		<link rel="stylesheet" href="normalize.css" />
+		<link rel="stylesheet" href="variable.css" />
+		<link rel="stylesheet" href="font.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="guess-song.css" />
+		<script src="guess-song.js" defer></script>
+	</head>
+	<body class="light-theme">
+		<main class="main">
+			<section class="guess-song-section">
+				<div class="guess-song-container">
+					<h1 class="guess-song-title">Guess the Composer</h1>
+					<div class="song-player">
+						<div class="song-info">
+							<h2 class="song-title">Song #1</h2>
+							<p class="song-description">
+								Listen carefully and try to guess if this was composed by a
+								human or AI
+							</p>
+						</div>
+						<div class="player-controls">
+							<audio id="audio-player" controls>
+								<source src="./audio/lacrimosa.mp3" type="audio/mpeg" />
+								Your browser does not support the audio element.
+							</audio>
+						</div>
+						<div class="guess-buttons">
+							<button class="guess-button guess-button--human">
+								<span class="guess-button__icon">👤</span>
+								<span class="guess-button__text">Human Composer</span>
+							</button>
+							<button class="guess-button guess-button--ai">
+								<span class="guess-button__icon">🤖</span>
+								<span class="guess-button__text">AI Composer</span>
+							</button>
+						</div>
+					</div>
+					<div class="progress-section">
+						<div class="progress-info">
+							<span class="progress-text">Progress: 1/5</span>
+							<span class="score-text">Score: 0</span>
+						</div>
+						<div class="progress-bar">
+							<div class="progress-bar__fill"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

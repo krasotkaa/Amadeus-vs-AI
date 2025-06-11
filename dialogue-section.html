@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dialogue with Salieri</title>
+		<link
+			rel="icon"
+			type="image/png"
+			href="/images/favicon-96x96.png"
+			sizes="96x96"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/svg/favicon.svg" />
+		<link rel="shortcut icon" href="/images/favicon.ico" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/images/apple-touch-icon.png"
+		/>
+		<link rel="manifest" href=="/images/site.webmanifest" />
+		<link rel="stylesheet" href="normalize.css" />
+		<link rel="stylesheet" href="variable.css" />
+		<link rel="stylesheet" href="font.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="dialogue-section.css" />
+		<script src="dialogue-section.js" defer></script>
+	</head>
+	<body class="light-theme">
+		<main class="main">
+			<section class="dialogue">
+				<div class="modal">
+					<div class="modal__content">
+						<div class="modal__header">
+							<h2 class="modal__title">Welcome to the Time Portal</h2>
+							<p class="modal__text">
+								You meet Salieri in some weird chat, you have a discussion about
+								music in 2025 and is it good or bad like the affect of ai
+							</p>
+						</div>
+						<form id="userInfoForm" class="modal__form">
+							<div class="form-group">
+								<label for="userName">Your Name:</label>
+								<input
+									type="text"
+									id="userName"
+									name="userName"
+									required
+									placeholder="Enter your name"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="userAge">Your Age:</label>
+								<input
+									type="number"
+									id="userAge"
+									name="userAge"
+									required
+									min="1"
+									max="120"
+									placeholder="Enter your age"
+								/>
+							</div>
+							<button type="submit" class="modal__button">
+								Start Conversation
+							</button>
+						</form>
+					</div>
+				</div>
+				<div class="dialogue__container">
+					<div class="dialogue__messages"></div>
+					<div class="dialogue__options"></div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
